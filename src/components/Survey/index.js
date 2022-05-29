@@ -59,7 +59,9 @@ export function Survey() {
             <label>{questionnaireQuestions.questions[questionNumber]["question"]}</label>
             <input value={state[questionnaireQuestions.questions[questionNumber]["title"]]} name={questionnaireQuestions.questions[questionNumber]["title"]} onChange={onChange}></input>
             <input value={state[questionnaireQuestions.questions[questionNumber]["followUpQuestions"]["title"]]} name={questionnaireQuestions.questions[questionNumber]["followUpQuestions"]["title"]} onChange={onChange}></input>
-            <button onClick={() => nextClick()}>Next</button>
+            {questionNumber === (questionnaireQuestions.questions.length -1)
+            ? <button>Submit</button> 
+            : <button onClick={() => nextClick()}>Next</button>}
             {state.fruits}
             {state.fruitsType}
             {state.siblings}
