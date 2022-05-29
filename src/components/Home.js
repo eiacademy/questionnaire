@@ -13,5 +13,5 @@ export function HomePage() {
             <Navbar></Navbar>
         </div>
     );
-  }
+}
   
